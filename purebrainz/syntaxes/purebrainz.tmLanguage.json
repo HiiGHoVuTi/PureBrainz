@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PureBrainz",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.purebrainz",
+				"match": "\\b(?|!|$|%|~)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.purebrainz",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.purebrainz",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "root.html.pb"
+}
